@@ -431,3 +431,10 @@ footer {
 .service-cards-grid:hover .service-box-image-top {
   transition: transform 0.3s ease;
 }
+
+
+/* Сильное увеличение карточки */
+.service-box-image-top:hover {
+  transform: scale(1.5);
+  z-index: 10;
+}
