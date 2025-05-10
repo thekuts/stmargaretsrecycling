@@ -439,3 +439,18 @@ footer {
     transform: scale(1.1);
   }
 }
+
+.service-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../img/texture-metal-light.png') repeat;
+  background-size: 400px 400px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+.service-section {
+  position: relative;
+  z-index: 1;
+}
