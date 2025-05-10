@@ -166,8 +166,8 @@ nav {
 
 /* Новый блок Services */
 .service-section {
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%);
-  mask-image: linear-gradient(to top, transparent 0%, black 30%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
   background-color: #2C328C;
   color: white;
   padding: 60px 20px;
