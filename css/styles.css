@@ -94,8 +94,7 @@ nav {
 
 /* Hero */
 .hero {
-  background: url('../img/metal-yard.jpg') no-repeat center top;
-  background-size: cover;
+  background: url('../img/metal-yard.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 100px 20px;
