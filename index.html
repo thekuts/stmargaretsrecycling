@@ -111,14 +111,12 @@
   </footer>
 
   <script>
-    // Открытие/закрытие бургер-меню
     const burger = document.querySelector('.burger');
     const navMenu = document.querySelector('.nav-menu');
     burger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
 
-    // Мобильные подменю при клике
     const submenuToggles = document.querySelectorAll('.has-submenu > a');
     submenuToggles.forEach(link => {
       link.addEventListener('click', (e) => {
