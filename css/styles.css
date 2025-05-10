@@ -10,47 +10,42 @@ body {
   line-height: 1.6;
 }
 
+/* Шапка */
 header {
   position: relative;
   background-color: #2C328C;
-  padding: 20px 40px;
-  color: white;
+  padding: 10px 20px;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   height: 80px;
-  overflow: visible;
+  z-index: 100;
 }
 
-/* Логотип вне потока */
-.logo-wrapper {
-  position: absolute;
-  top: 10px;
-  left: 40px;
-  z-index: 20;
-}
+/* Логотип */
 .logo-wrapper img {
-  height: 90px;
+  height: 60px;
   object-fit: contain;
-  display: block;
+}
+
+/* Бургер */
+.burger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* Меню */
 nav {
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: slideIn 0.6s ease-out forwards;
-}
-@keyframes slideIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: fadeIn 0.6s ease-out;
 }
 .nav-menu {
   list-style: none;
   display: flex;
-  align-items: center;
   gap: 25px;
 }
 .nav-menu > li {
@@ -74,7 +69,6 @@ nav {
   top: 100%;
   left: 0;
   background-color: #fff;
-  color: #333;
   min-width: 180px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 10;
@@ -91,7 +85,7 @@ nav {
   display: block;
 }
 
-/* Hero-секция */
+/* Hero */
 .hero {
   background: url('../img/metal-yard.jpg') center/cover no-repeat;
   color: white;
@@ -122,23 +116,22 @@ nav {
   background-color: #f0f0f0;
 }
 
-/* About */
-.about {
+/* Контент */
+.about, .vehicles, .videos {
   padding: 60px 20px;
   max-width: 900px;
   margin: auto;
   text-align: center;
 }
-.about h2 {
+.about h2, .vehicles h2, .videos h2 {
   color: #2C328C;
   margin-bottom: 20px;
 }
-.about p {
+.about p, .vehicles p, .videos p {
   font-size: 1.1em;
   color: #555;
 }
 
-/* Services */
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -162,18 +155,6 @@ nav {
 .service-card h3 {
   color: #00B050;
   margin-bottom: 10px;
-}
-
-/* Other sections */
-.vehicles, .videos {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-.vehicles h2, .videos h2 {
-  color: #2C328C;
-  margin-bottom: 20px;
 }
 
 /* Контакты */
@@ -212,7 +193,7 @@ nav {
   background-color: #009542;
 }
 
-/* Футер */
+/* Footer */
 footer {
   background-color: #2C328C;
   color: white;
@@ -221,20 +202,54 @@ footer {
   font-size: 0.9em;
 }
 
-/* Адаптивность */
+/* Анимация */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Мобильная адаптация */
 @media (max-width: 768px) {
-  header {
+  .burger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+    background-color: #2C328C;
+    margin-top: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .has-submenu .submenu {
+    display: none;
+    position: static;
+    background: #1e2377;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+
+  .has-submenu .submenu.open {
+    display: block;
+  }
+
+  .submenu li a {
+    color: white;
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
     height: auto;
   }
-  .nav-menu {
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 10px;
-  }
-  .services {
-    flex-direction: column;
-    align-items: center;
+
+  .logo-wrapper img {
+    height: 50px;
   }
 }
