@@ -404,7 +404,6 @@ footer {
   }
 }
 
-/* Карточки в 1 ряд (на десктопе) */
 @media (min-width: 1024px) {
   .service-cards-grid {
     display: flex;
@@ -412,29 +411,22 @@ footer {
     flex-wrap: nowrap;
     gap: 30px;
     align-items: stretch;
+    transition: all 0.3s ease;
   }
-}
 
-/* Увеличение всей карточки при наведении */
-.service-box-image-top {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex: 1 1 0;
-}
+  .service-box-image-top {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 0;
+  }
 
-.service-box-image-top:hover {
-  transform: scale(1.1);
-  z-index: 5;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-}
+  .service-box-image-top:hover {
+    transform: scale(1.2);
+    z-index: 2;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  }
 
-/* Для предотвращения перекрытия соседей */
-.service-cards-grid:hover .service-box-image-top {
-  transition: transform 0.3s ease;
-}
-
-
-/* Сильное увеличение карточки */
-.service-box-image-top:hover {
-  transform: scale(1.5);
-  z-index: 10;
+  /* плавное движение соседей */
+  .service-cards-grid:hover .service-box-image-top {
+    transition: transform 0.3s ease;
+  }
 }
