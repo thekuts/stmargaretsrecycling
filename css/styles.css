@@ -411,26 +411,22 @@ footer {
     flex-wrap: nowrap;
     gap: 30px;
     align-items: stretch;
-    position: relative;
   }
 
   .service-box-image-top {
     flex: 1 1 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 1;
+    position: relative;
+  }
+
+  .service-cards-grid:has(.service-box-image-top:hover) .service-box-image-top {
+    transform: scale(0.9);
   }
 
   .service-box-image-top:hover {
     transform: scale(1.2);
     z-index: 2;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-  }
-
-  .service-box-image-top:hover ~ .service-box-image-top {
-    transform: translateX(40px);
-  }
-
-  .service-cards-grid:hover .service-box-image-top:not(:hover):not(:has(~ .service-box-image-top:hover)) {
-    transform: translateX(-40px);
   }
 }
