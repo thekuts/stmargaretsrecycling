@@ -404,25 +404,30 @@ footer {
   }
 }
 
-/* Расположение карточек в один ряд (не для мобильных) */
+/* Карточки в 1 ряд (на десктопе) */
 @media (min-width: 1024px) {
   .service-cards-grid {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
     gap: 30px;
+    align-items: stretch;
   }
 }
 
-/* Увеличение изображения при наведении */
-.service-box-image-top img {
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
+/* Увеличение всей карточки при наведении */
+.service-box-image-top {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 0;
 }
 
-.service-box-image-top img:hover {
-  transform: scale(1.4);
-  z-index: 10;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  position: relative;
+.service-box-image-top:hover {
+  transform: scale(1.1);
+  z-index: 5;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Для предотвращения перекрытия соседей */
+.service-cards-grid:hover .service-box-image-top {
+  transition: transform 0.3s ease;
 }
