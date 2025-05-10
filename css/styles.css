@@ -1,1 +1,163 @@
-/* Custom styles */)
+/* Основные настройки */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Шапка */
+header {
+  background-color: #2C328C; /* синий из логотипа */
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header img {
+  height: 40px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero-секция */
+.hero {
+  background: linear-gradient(to right, #2C328C, #00B050);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.hero .cta-button {
+  background-color: white;
+  color: #2C328C;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.hero .cta-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* About */
+.about {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+.about h2 {
+  color: #2C328C;
+  margin-bottom: 20px;
+}
+.about p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Services */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+}
+.service-card {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  max-width: 280px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.service-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+.service-card h3 {
+  color: #00B050;
+  margin-bottom: 10px;
+}
+
+/* Контакты */
+.contact {
+  padding: 60px 20px;
+  background-color: #e6f2ec;
+  text-align: center;
+}
+.contact h2 {
+  color: #2C328C;
+  margin-bottom: 20px;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact button {
+  background-color: #00B050;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact button:hover {
+  background-color: #009542;
+}
+
+/* Футер */
+footer {
+  background-color: #2C328C;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+}
