@@ -2,102 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>St. Margaret’s Recycling</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-    #about {
-      background-color: #002b6d;
-      color: white;
-      padding: 60px 0;
-    }
-    #about h2 {
-      text-align: center;
-      color: #00cc33;
-      font-size: 2em;
-    }
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .card {
-      background-color: #003a8c;
-      border-radius: 8px;
-      padding: 20px;
-      width: 280px;
-      text-align: center;
-    }
-    .card h3 {
-      color: #ffffff;
-    }
-    .card p {
-      font-size: 0.95em;
-      line-height: 1.4em;
-    }
-    .card .icon {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 8px 16px;
-      background-color: #00cc33;
-      color: white;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>St. Margaret’s Metal Recycling</title>
+  <meta name="description" content="Scrap metal collection and recycling services across Ireland.">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-<section id="about">
-  <div class="container">
-    <h2>WE PROVIDE</h2>
-    <div class="card-container">
-
-      <div class="card">
-        <div class="icon">♻️</div>
-        <h3>Metal Recycling</h3>
-        <p>We handle all scrap metal — from domestic pickups to commercial contracts across Leinster. Drop-offs welcome.</p>
-        <a href="#contact">Learn More</a>
-      </div>
-
-      <div class="card">
-        <div class="icon">🚗</div>
-        <h3>Scrap My Car</h3>
-        <p>We safely dispose of cars and light commercials. Drop off or schedule a pickup — fully licensed depollution area on-site.</p>
-        <a href="#contact">Learn More</a>
-      </div>
-
-      <div class="card">
-        <div class="icon">🛻</div>
-        <h3>Skip Hire</h3>
-        <p>Commercial-grade metal skips from 14 to 40 cubic yards — delivery and pickup across Dublin and surrounding areas.</p>
-        <a href="#contact">Learn More</a>
-      </div>
-
-      <div class="card">
-        <div class="icon">🗑️</div>
-        <h3>1100L Bins</h3>
-        <p>Keep your workshop clean with mobile 1100L bins. Ideal for garages, factories, and heavy-use areas.</p>
-        <a href="#contact">Learn More</a>
-      </div>
-
+  <header>
+    <div class="logo-wrapper">
+      <img src="img/logo.png" alt="St. Margaret’s Recycling Logo" />
     </div>
-  </div>
-</section>
+
+    <button class="burger" aria-label="Toggle menu">&#9776;</button>
+
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+
+        <li class="has-submenu">
+          <a href="#about">About Us</a>
+          <ul class="submenu">
+            <li><a href="#">Our Staff</a></li>
+            <li><a href="#">Our Fleet</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="#metal">Metal Recycling</a>
+          <ul class="submenu">
+            <li><a href="#">Ferrous Metals</a></li>
+            <li><a href="#">Non Ferrous Metals</a></li>
+            <li><a href="#">Metal Skips</a></li>
+            <li><a href="#">1100 Ltr Bins</a></li>
+            <li><a href="#">Areas Covered</a></li>
+            <li><a href="#">Request a Call Back</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="#vehicles">End of Life Vehicles</a>
+          <ul class="submenu">
+            <li><a href="#">Deposit Your Vehicle</a></li>
+            <li><a href="#">Vehicle Collection</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Trusted Scrap Metal Recycling in Dublin & Leinster</h1>
+    <p>We collect, recycle, and handle scrap metals professionally and sustainably.</p>
+    <a href="#contact" class="cta-button">Request a Pickup</a>
+  </section>
+
+  <section class="about" id="about" style="background-color: #002b6d; color: white; padding: 60px 0;">
+    <div class="container" style="width: 90%; max-width: 1200px; margin: auto;">
+      <h2 style="text-align: center; color: #00cc33;">WE PROVIDE</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+
+        <div style="background-color: #003a8c; border-radius: 8px; padding: 20px; width: 280px; text-align: center;">
+          <div style="font-size: 40px; margin-bottom: 15px;">♻️</div>
+          <h3>Metal Recycling</h3>
+          <p>We handle all scrap metal — from domestic pickups to commercial contracts across Leinster. Drop-offs welcome.</p>
+          <a href="#contact" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #00cc33; color: white; border-radius: 4px; text-decoration: none;">Learn More</a>
+        </div>
+
+        <div style="background-color: #003a8c; border-radius: 8px; padding: 20px; width: 280px; text-align: center;">
+          <div style="font-size: 40px; margin-bottom: 15px;">🚗</div>
+          <h3>Scrap My Car</h3>
+          <p>We safely dispose of cars and light commercials. Drop off or schedule a pickup — fully licensed depollution area on-site.</p>
+          <a href="#contact" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #00cc33; color: white; border-radius: 4px; text-decoration: none;">Learn More</a>
+        </div>
+
+        <div style="background-color: #003a8c; border-radius: 8px; padding: 20px; width: 280px; text-align: center;">
+          <div style="font-size: 40px; margin-bottom: 15px;">🛻</div>
+          <h3>Skip Hire</h3>
+          <p>Commercial-grade metal skips from 14 to 40 cubic yards — delivery and pickup across Dublin and surrounding areas.</p>
+          <a href="#contact" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #00cc33; color: white; border-radius: 4px; text-decoration: none;">Learn More</a>
+        </div>
+
+        <div style="background-color: #003a8c; border-radius: 8px; padding: 20px; width: 280px; text-align: center;">
+          <div style="font-size: 40px; margin-bottom: 15px;">🗑️</div>
+          <h3>1100L Bins</h3>
+          <p>Keep your workshop clean with mobile 1100L bins. Ideal for garages, factories, and heavy-use areas.</p>
+          <a href="#contact" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #00cc33; color: white; border-radius: 4px; text-decoration: none;">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="metal">
+    <div class="service-card">
+      <img src="img/icons/pickup.png" alt="Pickup Icon" />
+      <h3>Scrap Collection</h3>
+      <p>We collect metals from your site quickly and safely, saving your time and space.</p>
+    </div>
+    <div class="service-card">
+      <img src="img/icons/pickup.png" alt="Contract Icon" />
+      <h3>Business Contracts</h3>
+      <p>Flexible commercial recycling agreements tailored to your industry needs.</p>
+    </div>
+    <div class="service-card">
+      <img src="img/icons/pickup.png" alt="Drop-off Icon" />
+      <h3>Drop-off Centre</h3>
+      <p>Bring your scrap directly to our facility — fast unloading, fair prices.</p>
+    </div>
+  </section>
+
+  <section class="vehicles" id="vehicles">
+    <h2>End of Life Vehicles</h2>
+    <p>We responsibly dismantle and recycle end-of-life vehicles in accordance with environmental regulations.</p>
+  </section>
+
+  <section class="videos" id="videos">
+    <h2>Videos</h2>
+    <p>Coming soon: watch how we handle metal safely and efficiently.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Call us at <a href="tel:+353871234567">+353 87 123 4567</a> or send us a message below:</p>
+    <form action="https://formspree.io/f/your-code-here" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 St. Margaret’s Recycling. All rights reserved.
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navMenu = document.querySelector('.nav-menu');
+    burger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    const submenuToggles = document.querySelectorAll('.has-submenu > a');
+    submenuToggles.forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth < 768) {
+          e.preventDefault();
+          link.nextElementSibling.classList.toggle('open');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
