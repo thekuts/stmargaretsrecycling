@@ -411,12 +411,12 @@ footer {
     flex-wrap: nowrap;
     gap: 30px;
     align-items: stretch;
-    transition: all 0.3s ease;
   }
 
   .service-box-image-top {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex: 1 1 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
   }
 
   .service-box-image-top:hover {
@@ -425,8 +425,12 @@ footer {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
   }
 
-  /* плавное движение соседей */
-  .service-cards-grid:hover .service-box-image-top {
+  .service-cards-grid:hover .service-box-image-top:not(:hover) {
+    transform: translateX(-30px);
     transition: transform 0.3s ease;
+  }
+
+  .service-box-image-top:hover ~ .service-box-image-top {
+    transform: translateX(30px);
   }
 }
