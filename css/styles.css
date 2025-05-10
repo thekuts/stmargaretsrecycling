@@ -259,3 +259,55 @@ footer {
     height: 50px;
   }
 }
+
+.services-block {
+  background-color: #2C328C;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 30px;
+}
+
+.services-block .service {
+  max-width: 250px;
+  text-align: center;
+}
+
+.services-block h3 {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #C0C4FF;
+  border-bottom: 2px solid #4950AA;
+  padding-bottom: 5px;
+}
+
+.services-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.services-block p {
+  font-size: 0.95em;
+  color: #e2e6ff;
+  margin-bottom: 15px;
+}
+
+.btn-service {
+  background-color: #0071EB;
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.btn-service:hover {
+  background-color: #005cc0;
+}
+
