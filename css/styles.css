@@ -55,6 +55,7 @@ header img {
   min-width: 180px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 10;
+  list-style: none; /* 💡 убираем кружки */
 }
 .submenu li a {
   color: #2C328C;
@@ -147,69 +148,4 @@ header img {
   margin: auto;
   text-align: center;
 }
-.vehicles h2, .videos h2 {
-  color: #2C328C;
-  margin-bottom: 20px;
-}
-
-/* Контакты */
-.contact {
-  padding: 60px 20px;
-  background-color: #e6f2ec;
-  text-align: center;
-}
-.contact h2 {
-  color: #2C328C;
-  margin-bottom: 20px;
-}
-.contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.contact input,
-.contact textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.contact button {
-  background-color: #00B050;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.contact button:hover {
-  background-color: #009542;
-}
-
-/* Футер */
-footer {
-  background-color: #2C328C;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-menu {
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 10px;
-  }
-  .services {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+.vehicles h2, .videos h2
