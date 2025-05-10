@@ -417,16 +417,19 @@ footer {
     flex: 1 1 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 1;
-    position: relative;
-  }
-
-  .service-cards-grid:has(.service-box-image-top:hover) .service-box-image-top {
-    transform: scale(0.9);
   }
 
   .service-box-image-top:hover {
-    transform: scale(1.2);
+    transform: scale(1.18);
     z-index: 2;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .service-box-image-top img {
+    transition: transform 0.3s ease;
+  }
+
+  .service-box-image-top:hover img {
+    transform: scale(1.1);
   }
 }
