@@ -4,9 +4,129 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>St. Margaret’s Recycling</title>
+  <meta name="description" content="Professional metal recycling and collection services across Ireland. Fast, reliable, sustainable.">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #ccc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .hero {
+      background: #007b3d;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .cta-button {
+      background-color: #fff;
+      color: #007b3d;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      background: #ffffff;
+    }
+    .service-card {
+      background: #f0f0f0;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px;
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .service-card h3 {
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: #1f1f1f;
+      color: #aaa;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8em;
+      }
+      .hero p {
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to St. Margaret’s Recycling</h1>
-  <p>This site is now live via GitHub Pages!</p>
+
+  <header>
+    <h2>St. Margaret’s Recycling</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Metal Recycling Services Across Ireland</h1>
+    <p>Fast collection, fair pricing, and sustainable recycling solutions.</p>
+    <a href="#" class="cta-button">Get a Quote</a>
+  </section>
+
+  <section class="services">
+    <div class="service-card">
+      <h3>Scrap Metal Collection</h3>
+      <p>We pick up ferrous and non-ferrous scrap from residential and commercial sites.</p>
+    </div>
+    <div class="service-card">
+      <h3>Demolition Services</h3>
+      <p>Full dismantling and disposal of metal structures and industrial machinery.</p>
+    </div>
+    <div class="service-card">
+      <h3>Industrial Recycling</h3>
+      <p>We handle large-scale recycling for construction, automotive and utility sectors.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 St. Margaret’s Recycling. All rights reserved.
+  </footer>
+
 </body>
 </html>
