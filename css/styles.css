@@ -10,7 +10,32 @@ body {
   line-height: 1.6;
 }
 
-/* Анимация появления меню */
+header {
+  position: relative;
+  background-color: #2C328C;
+  padding: 20px 40px;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
+  overflow: visible;
+}
+
+/* Логотип вне потока */
+.logo-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  z-index: 20;
+}
+.logo-wrapper img {
+  height: 90px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Меню */
 nav {
   opacity: 0;
   transform: translateY(-20px);
@@ -22,25 +47,6 @@ nav {
     transform: translateY(0);
   }
 }
-
-header {
-  background-color: #2C328C;
-  padding: 20px 40px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-header img {
-  height: 80px;
-  max-height: 100px;
-  object-fit: contain;
-  margin: 0;
-  padding: 0;
-}
-
-/* Меню */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -220,6 +226,7 @@ footer {
   header {
     flex-direction: column;
     align-items: flex-start;
+    height: auto;
   }
   .nav-menu {
     flex-direction: column;
