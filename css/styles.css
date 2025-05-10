@@ -403,3 +403,26 @@ footer {
     height: auto;
   }
 }
+
+/* Расположение карточек в один ряд (не для мобильных) */
+@media (min-width: 1024px) {
+  .service-cards-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+}
+
+/* Увеличение изображения при наведении */
+.service-box-image-top img {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.service-box-image-top img:hover {
+  transform: scale(1.4);
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
