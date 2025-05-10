@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>St. Margaret’s Metal Recycling</title>
-  <meta name="description" content="Scrap metal collection and recycling services across Ireland. Fast, reliable, sustainable.">
+  <meta name="description" content="Scrap metal collection and recycling services across Ireland.">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -13,6 +13,9 @@
     <div class="logo-wrapper">
       <img src="img/logo.png" alt="St. Margaret’s Recycling Logo" />
     </div>
+
+    <button class="burger" aria-label="Toggle menu">&#9776;</button>
+
     <nav>
       <ul class="nav-menu">
         <li><a href="#">Home</a></li>
@@ -61,7 +64,7 @@
 
   <section class="about" id="about">
     <h2>About Us</h2>
-    <p>St. Margaret’s Recycling provides fast, honest and eco-friendly scrap metal services for households, businesses and industrial clients across Ireland. Licensed, insured and experienced.</p>
+    <p>St. Margaret’s Recycling provides fast, honest and eco-friendly scrap metal services for households, businesses and industrial clients across Ireland.</p>
   </section>
 
   <section class="services" id="metal">
@@ -106,6 +109,26 @@
   <footer>
     &copy; 2025 St. Margaret’s Recycling. All rights reserved.
   </footer>
+
+  <script>
+    // Открытие/закрытие бургер-меню
+    const burger = document.querySelector('.burger');
+    const navMenu = document.querySelector('.nav-menu');
+    burger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Мобильные подменю при клике
+    const submenuToggles = document.querySelectorAll('.has-submenu > a');
+    submenuToggles.forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth < 768) {
+          e.preventDefault();
+          link.nextElementSibling.classList.toggle('open');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
