@@ -278,3 +278,22 @@ footer {
     width: 100px;
   }
 }
+
+/* Updated dark icon strip color and spacing */
+.icon-strip.dark-icons {
+  background: #1e2a57; /* ближе к цвету ног кранов */
+  padding: 10px 10px;
+}
+
+.icon-strip.dark-icons .icon-item img {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 5px;
+}
+
+.icon-strip.dark-icons .icon-item span {
+  color: white;
+  font-size: 0.95em;
+  font-weight: 600;
+  margin-top: 0;
+}
