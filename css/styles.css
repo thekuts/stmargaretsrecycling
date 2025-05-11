@@ -138,6 +138,14 @@ header {
   color: #2C328C;
 }
 .service-cards-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+}
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -167,6 +175,11 @@ header {
   font-weight: 700;
 }
 .service-box-image-top img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
   width: 100%;
   height: 180px;
   object-fit: cover;
