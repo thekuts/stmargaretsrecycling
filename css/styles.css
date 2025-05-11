@@ -138,6 +138,14 @@ header {
   color: #2C328C;
 }
 .service-cards-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 20px 0;
+}
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -196,6 +204,13 @@ footer {
   padding: 20px;
   font-size: 0.9em;
 }
+@media (max-width: 1024px) {
+  .service-cards-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .burger {
     display: block;
