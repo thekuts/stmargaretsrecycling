@@ -1,150 +1,30 @@
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffff;
-  color: #333;
-  line-height: 1.6;
-}
-/* Header */
-header {
-  position: relative;
-  background-color: #ffffff;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 80px;
-  z-index: 100;
-  border-bottom: 1px solid #e0e0e0;
-}
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-}
-.logo-wrapper img {
-  height: 60px;
-  object-fit: contain;
-  display: block;
-}
-/* Burger */
-.burger {
-  display: none;
-  font-size: 30px;
-  color: #2C328C;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-/* Navigation */
-nav {
-  animation: fadeIn 0.6s ease-out;
-}
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-.nav-menu > li {
-  position: relative;
-}
-.nav-menu a {
-  color: #2C328C;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px;
-  display: block;
-}
-.nav-menu a:hover {
-  text-decoration: underline;
-}
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  min-width: 180px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 10;
-  list-style: none;
-}
-.submenu li a {
-  color: #2C328C;
-  padding: 10px 15px;
-}
-.submenu li a:hover {
-  background-color: #f2f2f2;
-}
-.has-submenu:hover .submenu {
-  display: block;
-}
-/* Hero */
-.hero {
-  background: url('../img/metal-yard.png') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-.hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-}
-.cta-button {
-  background-color: #2C328C;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-.cta-button:hover {
-  background-color: #1f2466;
-}
-
-/* Services Section with Video Background */
 .service-section {
-  position: relative;
+  background-color: #ffffff; /* белый фон */
+  color: #2C328C;
   padding: 60px 20px;
   text-align: center;
-  overflow: hidden;
-  z-index: 0;
+  position: relative;
+  z-index: 1;
 }
-.service-video-wrapper {
+
+/* Удалено:
+.service-section::before {
+  content: "";
   position: absolute;
   inset: 0;
+  background: url('../img/pattern.png') repeat;
+  background-size: 512px;
+  opacity: 0.04;
+  pointer-events: none;
   z-index: 0;
-  overflow: hidden;
 }
-.service-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-}
-.service-section > * {
-  position: relative;
-  z-index: 2;
-}
+*/
+
 .service-title h2 {
   font-size: 2em;
   margin-bottom: 40px;
 }
+
 .service-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -152,6 +32,7 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .service-box-image-top {
   background-color: white;
   color: #2C328C;
@@ -163,21 +44,25 @@ nav {
   align-items: center;
   overflow: hidden;
 }
+
 .service-box-image-top h3 {
   font-size: 1.1em;
   margin: 20px 0 10px 0;
   font-weight: 700;
 }
+
 .service-box-image-top img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
+
 .service-box-image-top p {
   font-size: 0.95em;
   margin: 15px 20px;
   color: #333;
 }
+
 .learn-button {
   margin-top: auto;
   display: inline-block;
@@ -188,107 +73,43 @@ nav {
   border-radius: 5px;
   font-weight: bold;
 }
+
 .learn-button:hover {
   background-color: #009542;
 }
 
-/* Other Sections */
-.about, .vehicles, .videos {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-.about h2, .vehicles h2, .videos h2 {
-  color: #2C328C;
-  margin-bottom: 20px;
-}
-.about p, .vehicles p, .videos p {
-  font-size: 1.1em;
-  color: #555;
-}
-.contact {
-  padding: 60px 20px;
-  background-color: #e6f2ec;
-  text-align: center;
-}
-.contact h2 {
-  color: #2C328C;
-  margin-bottom: 20px;
-}
-.contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.contact input,
-.contact textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.contact button {
-  background-color: #00B050;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.contact button:hover {
-  background-color: #009542;
-}
-
-/* Footer */
-footer {
-  background-color: #2C328C;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .burger {
-    display: block;
-  }
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #ffffff;
-    margin-top: 10px;
-  }
-  .nav-menu.active {
-    display: flex;
-  }
-  .has-submenu .submenu {
-    display: none;
-    position: static;
-    background-color: #f8f8f8;
-    box-shadow: none;
-    padding-left: 20px;
-  }
-  .has-submenu .submenu.open {
-    display: block;
-  }
-  .submenu li a {
-    color: #2C328C;
-  }
-  header {
-    flex-direction: row;
-    align-items: center;
+  .service-box-image-top img {
     height: auto;
   }
-  .logo-wrapper img {
-    height: 50px;
-  }
+}
+
+@media (min-width: 1024px) {
   .service-cards-grid {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    align-items: stretch;
+  }
+
+  .service-box-image-top {
+    flex: 1 1 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+  }
+
+  .service-box-image-top:hover {
+    transform: scale(1.18);
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .service-box-image-top img {
+    transition: transform 0.3s ease;
+  }
+
+  .service-box-image-top:hover img {
+    transform: scale(1.1);
   }
 }
