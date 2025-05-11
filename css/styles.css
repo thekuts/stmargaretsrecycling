@@ -280,10 +280,10 @@ footer {
 }
 
 
-/* Иконки в синей полосе */
+/* Убираем верхний отступ у иконок в синем блоке */
 .icon-strip.dark-icons {
   background: #1e2a57;
-  padding: 20px 0 0 0; /* убрали нижний отступ */
+  padding: 0;
 }
 .icon-grid {
   display: flex;
@@ -291,11 +291,11 @@ footer {
   gap: 25px;
   max-width: 1200px;
   margin: auto;
+  padding: 0;
 }
 .icon-item {
   flex: 0 0 auto;
   text-align: center;
-  margin-bottom: 0;
 }
 .icon-item img {
   width: 72px;
@@ -304,7 +304,7 @@ footer {
   margin: 0 auto;
 }
 
-/* Подписи под иконками — без внешних отступов */
+/* Блок с подписями */
 .icon-labels {
   display: flex;
   justify-content: space-between;
