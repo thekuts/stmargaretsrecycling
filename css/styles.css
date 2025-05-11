@@ -146,20 +146,6 @@ header {
   overflow-x: auto;
   padding: 20px 0;
 }
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 30px;
-  overflow-x: auto;
-  padding: 20px 0;
-}
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .service-box-image-top {
   background-color: white;
   color: #2C328C;
@@ -214,19 +200,11 @@ footer {
 }
 @media (max-width: 1024px) {
   .service-cards-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 20px 0;
-}
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 }
-
 @media (max-width: 768px) {
   .burger {
     display: block;
@@ -250,11 +228,14 @@ footer {
   }
 }
 
-
 .icon-strip {
   background: white;
   padding: 30px 20px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.icon-strip.dark-icons {
+  background: #2C328C;
+  padding: 15px 20px;
 }
 .icon-grid {
   display: flex;
@@ -270,6 +251,13 @@ footer {
   flex: 0 0 auto;
   width: 120px;
 }
+.icon-strip.dark-icons .icon-item span {
+  color: white;
+}
+.icon-strip.dark-icons .icon-item img {
+  width: 72px;
+  height: 72px;
+}
 .icon-item img {
   width: 48px;
   height: 48px;
@@ -281,7 +269,6 @@ footer {
   color: #2C328C;
   font-weight: 600;
 }
-
 @media (max-width: 768px) {
   .icon-grid {
     gap: 15px;
