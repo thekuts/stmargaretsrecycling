@@ -142,20 +142,21 @@
   <footer>
     &copy; 2025 St. Margaret’s Recycling. All rights reserved.
   </footer>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const icons = document.querySelectorAll(".icon-strip.dark-icons .icon-item");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, { threshold: 0.1 });
 
-    icons.forEach(icon => observer.observe(icon));
-  });
-</script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const icons = document.querySelectorAll(".icon-strip.dark-icons .icon-item");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.1 });
+
+      icons.forEach(icon => observer.observe(icon));
+    });
+  </script>
 
 </body>
 </html>
