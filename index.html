@@ -7,6 +7,7 @@
   <title>St. Margaret’s Metal Recycling</title>
   <meta name="description" content="Scrap metal collection and recycling services across Ireland.">
   <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -142,6 +143,16 @@
   <footer>
     &copy; 2025 St. Margaret’s Recycling. All rights reserved.
   </footer>
+  <!-- Тексты иконок, появляются при скролле -->
+  <section class="icon-labels">
+    <div class="label" data-aos="fade-up">Scrap Metal Recycling</div>
+    <div class="label" data-aos="fade-up">Vehicle Recycling</div>
+    <div class="label" data-aos="fade-up">Scrap Metal Collection</div>
+    <div class="label" data-aos="fade-up">Wheelie Bins</div>
+    <div class="label" data-aos="fade-up">Skip Hire</div>
+    <div class="label" data-aos="fade-up">Additional Services</div>
+  </section>
+
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -156,30 +167,11 @@
 
       icons.forEach(icon => observer.observe(icon));
     });
-  
-      items.forEach(item => observer.observe(item));
-    });
   </script>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const items = document.querySelectorAll(".icon-strip.dark-icons .icon-item");
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      }, {
-        threshold: 0.3
-      });
-
-      items.forEach(item => observer.observe(item));
-    });
-  
-      items.forEach(item => observer.observe(item));
-    });
+    AOS.init({ duration: 700, once: true });
   </script>
 </body>
 </html>
