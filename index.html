@@ -158,5 +158,20 @@
     });
   </script>
 
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const items = document.querySelectorAll(".icon-strip.dark-icons .icon-item");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.8 });
+
+      items.forEach(item => observer.observe(item));
+    });
+  </script>
 </body>
 </html>
