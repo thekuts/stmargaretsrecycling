@@ -43,36 +43,41 @@
   </section>
 
   <section class="service-section" id="services">
-  <div class="service-title">
-    <h2>Our Services</h2>
-  </div>
-  <div class="service-cards-grid">
-    <div class="service-box-image-top">
-      <h3>METAL RECYCLING</h3>
-      <img src="img/icons/metal-recycling.png" alt="Metal Recycling">
-      <p>We work with commercial and domestic clients collecting scrap metal across Leinster.</p>
-      <a href="#" class="learn-button">Learn More</a>
+    <div class="service-video-wrapper">
+      <video autoplay muted loop playsinline class="service-video">
+        <source src="video/services-bg.mp4" type="video/mp4" />
+      </video>
     </div>
-    <div class="service-box-image-top">
-      <h3>SCRAP MY CAR</h3>
-      <img src="img/icons/car-recycling.png" alt="Scrap My Car">
-      <p>We collect or accept scrap cars on-site and perform full depollution and recycling.</p>
-      <a href="#" class="learn-button">Learn More</a>
+    <div class="service-title">
+      <h2>Our Services</h2>
     </div>
-    <div class="service-box-image-top">
-      <h3>SKIP HIRE</h3>
-      <img src="img/icons/skip.png" alt="Skip Hire">
-      <p>We provide skip hire for domestic and commercial clients – from 14 to 40 cubic yards.</p>
-      <a href="#" class="learn-button">Learn More</a>
+    <div class="service-cards-grid">
+      <div class="service-box-image-top">
+        <h3>METAL RECYCLING</h3>
+        <img src="img/icons/metal-recycling.png" alt="Metal Recycling">
+        <p>We work with commercial and domestic clients collecting scrap metal across Leinster.</p>
+        <a href="#" class="learn-button">Learn More</a>
+      </div>
+      <div class="service-box-image-top">
+        <h3>SCRAP MY CAR</h3>
+        <img src="img/icons/car-recycling.png" alt="Scrap My Car">
+        <p>We collect or accept scrap cars on-site and perform full depollution and recycling.</p>
+        <a href="#" class="learn-button">Learn More</a>
+      </div>
+      <div class="service-box-image-top">
+        <h3>SKIP HIRE</h3>
+        <img src="img/icons/skip.png" alt="Skip Hire">
+        <p>We provide skip hire for domestic and commercial clients – from 14 to 40 cubic yards.</p>
+        <a href="#" class="learn-button">Learn More</a>
+      </div>
+      <div class="service-box-image-top">
+        <h3>1100LTR BINS</h3>
+        <img src="img/icons/bin.png" alt="1100L Bins">
+        <p>Ideal for garages and workshops. Our bins help keep your workspace safe and tidy.</p>
+        <a href="#" class="learn-button">Learn More</a>
+      </div>
     </div>
-    <div class="service-box-image-top">
-      <h3>1100LTR BINS</h3>
-      <img src="img/icons/bin.png" alt="1100L Bins">
-      <p>Ideal for garages and workshops. Our bins help keep your workspace safe and tidy.</p>
-      <a href="#" class="learn-button">Learn More</a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section class="vehicles" id="vehicles">
     <h2>End of Life Vehicles</h2>
@@ -98,24 +103,5 @@
   <footer>
     &copy; 2025 St. Margaret’s Recycling. All rights reserved.
   </footer>
-
-  <script>
-    const burger = document.querySelector('.burger');
-    const navMenu = document.querySelector('.nav-menu');
-    burger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    const submenuToggles = document.querySelectorAll('.has-submenu > a');
-    submenuToggles.forEach(link => {
-      link.addEventListener('click', (e) => {
-        if (window.innerWidth < 768) {
-          e.preventDefault();
-          link.nextElementSibling.classList.toggle('open');
-        }
-      });
-    });
-  </script>
-
 </body>
 </html>
