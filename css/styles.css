@@ -157,6 +157,18 @@ header {
   color: #2C328C;
   border-radius: 10px;
   padding: 0 0 20px 0;
+  border: 1px solid #2C328C;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  background-color: white;
+  color: #2C328C;
+  border-radius: 10px;
+  padding: 0 0 20px 0;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   border: 2px solid #2C328C;
   display: flex;
@@ -166,6 +178,9 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .service-box-image-top:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -175,6 +190,11 @@ header {
   font-weight: 700;
 }
 .service-box-image-top img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
   width: 100%;
   height: 180px;
   object-fit: cover;
