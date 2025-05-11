@@ -361,3 +361,12 @@ header {
 body {
   padding-top: 80px;
 }
+
+
+.about-section {
+  background-color: white !important;
+}
+
+.service-section {
+  background-color: white !important;
+}
