@@ -138,14 +138,6 @@ header {
   color: #2C328C;
 }
 .service-cards-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 20px 0;
-}
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -153,6 +145,22 @@ header {
   margin: 0 auto;
 }
 .service-box-image-top {
+  background-color: white;
+  color: #2C328C;
+  border-radius: 10px;
+  padding: 0 0 20px 0;
+  border: 1px solid #2C328C;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 280px;
+  height: 100%;
+  min-height: 420px;
+  box-sizing: border-box;
+}
   background-color: white;
   color: #2C328C;
   border-radius: 10px;
@@ -176,9 +184,10 @@ header {
 }
 .service-box-image-top img {
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: contain;
-  display: block;
+  padding: 10px;
+  background-color: white;
 }
   width: 100%;
   height: 180px;
