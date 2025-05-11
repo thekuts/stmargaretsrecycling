@@ -377,3 +377,20 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
 }
+
+
+/* Убираем горизонтальный скролл и ограничения */
+body, html {
+  overflow-x: hidden;
+}
+
+.service-section {
+  overflow-x: hidden;
+}
+
+.service-cards-grid {
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  overflow-x: visible;
+}
