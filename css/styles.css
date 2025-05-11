@@ -164,15 +164,22 @@ nav {
   margin-bottom: 10px;
 }
 
-/* Блок Our Services — очищенный фон */
+/* Our Services */
 .service-section {
   padding: 60px 20px;
   text-align: center;
 }
 
-.service-title h2 {
-  font-size: 2em;
-  margin-bottom: 40px;
+.service-title h2.section-heading {
+  display: inline-block;
+  border: 3px solid #2C328C;
+  padding: 10px 25px;
+  background-color: white;
+  color: #2C328C;
+  border-radius: 8px;
+  font-size: 1.8em;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .service-cards-grid {
@@ -188,11 +195,18 @@ nav {
   color: #2C328C;
   border-radius: 10px;
   padding: 0 0 20px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border: 2px solid #2C328C;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box-image-top:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .service-box-image-top h3 {
@@ -223,6 +237,7 @@ nav {
   border-radius: 5px;
   font-weight: bold;
 }
+
 .learn-button:hover {
   background-color: #009542;
 }
@@ -278,7 +293,7 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Адаптация */
+/* Мобильная адаптация */
 @media (max-width: 768px) {
   .burger {
     display: block;
@@ -343,14 +358,11 @@ footer {
 
   .service-box-image-top {
     flex: 1 1 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1;
   }
 
   .service-box-image-top:hover {
     transform: scale(1.18);
     z-index: 2;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   }
 
   .service-box-image-top img {
