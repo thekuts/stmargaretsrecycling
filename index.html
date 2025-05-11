@@ -132,5 +132,25 @@
     © 2025 St. Margaret’s Recycling. All rights reserved.
   </footer>
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const labelBlock = document.querySelector(".icon-labels");
+    if (labelBlock) {
+      labelBlock.classList.add("hidden");
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            labelBlock.classList.add("fade-in");
+            labelBlock.classList.remove("hidden");
+            observer.unobserve(labelBlock);
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(labelBlock);
+    }
+  });
+</script>
 </body>
+
 </html>
