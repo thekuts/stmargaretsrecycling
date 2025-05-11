@@ -139,9 +139,12 @@ header {
 }
 .service-cards-grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
 }
 .service-box-image-top {
   background-color: white;
@@ -155,7 +158,6 @@ header {
   align-items: center;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 280px;
 }
 .service-box-image-top:hover {
   transform: scale(1.05);
@@ -196,11 +198,44 @@ footer {
   padding: 20px;
   font-size: 0.9em;
 }
+@media (max-width: 1024px) {
+  .service-cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 10px;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .about-block,
+  .about-block.reverse {
+    flex-direction: column;
+  }
+  .about-image {
+    max-width: 100%;
+  }
+}
+
+.icon-strip {
+  background: white;
+  padding: 30px 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
 .icon-strip.dark-icons {
-  background: #1e2a57;
-  padding: 30px 0;
-  position: relative;
-  z-index: 1;
+  background: #2C328C;
+  padding: 15px 20px;
 }
 .icon-grid {
   display: flex;
@@ -215,21 +250,47 @@ footer {
   text-align: center;
   flex: 0 0 auto;
   width: 120px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.icon-item.visible {
-  opacity: 1;
-  transform: translateY(0);
+.icon-strip.dark-icons .icon-item span {
+  color: white;
 }
-.icon-item img {
+.icon-strip.dark-icons .icon-item img {
   width: 72px;
   height: 72px;
+}
+.icon-item img {
+  width: 48px;
+  height: 48px;
   margin-bottom: 10px;
 }
 .icon-item span {
   display: block;
+  font-size: 0.95em;
+  color: #2C328C;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .icon-grid {
+    gap: 15px;
+    justify-content: flex-start;
+  }
+  .icon-item {
+    width: 100px;
+  }
+}
+
+.icon-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 20px auto 40px auto;
+  padding: 0 10px;
+}
+.icon-labels .label {
+  text-align: center;
+  flex: 0 0 auto;
+  width: 120px;
   color: #2C328C;
   font-size: 0.95em;
   font-weight: 600;
