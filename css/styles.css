@@ -436,20 +436,8 @@ footer {
   }
 }
 
-.service-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('../img/pattern.png') repeat;
-  background-size: 512px;
-  opacity: 0.04;
-  pointer-events: none;
-  z-index: 0;
-}
-.service-section {
-  position: relative;
-  z-index: 1;
-}
+
+
 
 
 .wave-transition {
