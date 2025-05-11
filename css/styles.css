@@ -164,14 +164,10 @@ nav {
   margin-bottom: 10px;
 }
 
-/* Обновлённый блок Our Services — без фона и паттерна */
+/* Блок Our Services — очищенный фон */
 .service-section {
-  background-color: #ffffff;
-  color: #2C328C;
   padding: 60px 20px;
   text-align: center;
-  position: relative;
-  z-index: 1;
 }
 
 .service-title h2 {
@@ -190,4 +186,178 @@ nav {
 .service-box-image-top {
   background-color: white;
   color: #2C328C;
-  border-radius: 10px
+  border-radius: 10px;
+  padding: 0 0 20px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.service-box-image-top h3 {
+  font-size: 1.1em;
+  margin: 20px 0 10px 0;
+  font-weight: 700;
+}
+
+.service-box-image-top img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-box-image-top p {
+  font-size: 0.95em;
+  margin: 15px 20px;
+  color: #333;
+}
+
+.learn-button {
+  margin-top: auto;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00B050;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.learn-button:hover {
+  background-color: #009542;
+}
+
+/* Контакты */
+.contact {
+  padding: 60px 20px;
+  background-color: #e6f2ec;
+  text-align: center;
+}
+.contact h2 {
+  color: #2C328C;
+  margin-bottom: 20px;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact button {
+  background-color: #00B050;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact button:hover {
+  background-color: #009542;
+}
+
+/* Footer */
+footer {
+  background-color: #2C328C;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптация */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .has-submenu .submenu {
+    display: none;
+    position: static;
+    background-color: #f8f8f8;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+
+  .has-submenu .submenu.open {
+    display: block;
+  }
+
+  .submenu li a {
+    color: #2C328C;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+  }
+
+  .logo-wrapper img {
+    height: 50px;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box-image-top img {
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-cards-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    align-items: stretch;
+  }
+
+  .service-box-image-top {
+    flex: 1 1 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+  }
+
+  .service-box-image-top:hover {
+    transform: scale(1.18);
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .service-box-image-top img {
+    transition: transform 0.3s ease;
+  }
+
+  .service-box-image-top:hover img {
+    transform: scale(1.1);
+  }
+}
