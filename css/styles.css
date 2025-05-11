@@ -249,3 +249,45 @@ footer {
     max-width: 100%;
   }
 }
+
+
+.icon-strip {
+  background: white;
+  padding: 30px 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.icon-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  max-width: 1200px;
+  margin: auto;
+}
+.icon-item {
+  text-align: center;
+  flex: 0 0 auto;
+  width: 120px;
+}
+.icon-item img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+.icon-item span {
+  display: block;
+  font-size: 0.95em;
+  color: #2C328C;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .icon-grid {
+    gap: 15px;
+    justify-content: flex-start;
+  }
+  .icon-item {
+    width: 100px;
+  }
+}
