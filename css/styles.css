@@ -355,16 +355,19 @@ footer {
   flex-direction: row-reverse;
 }
 .about-image {
-  flex: 1 1 400px;
-  max-width: 500px;
+  flex: 1 1 640px;
+  max-width: 640px;
 }
-.about-image img {
+.about-image video {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 .about-text {
-  flex: 1 1 400px;
+  flex: 1 1 500px;
   max-width: 600px;
 }
 .about-text h2 {
@@ -379,19 +382,11 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .about-block {
-    flex-direction: column;
-  }
+  .about-block,
   .about-block.reverse {
     flex-direction: column;
   }
-}
-.about-image video {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  object-fit: cover;
+  .about-image {
+    max-width: 100%;
+  }
 }
