@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,8 +10,7 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
-/* Шапка */
+/* Header */
 header {
   position: relative;
   background-color: #ffffff;
@@ -23,20 +23,16 @@ header {
   z-index: 100;
   border-bottom: 1px solid #e0e0e0;
 }
-
-/* Логотип */
 .logo-wrapper {
   display: flex;
   align-items: center;
 }
 .logo-wrapper img {
   height: 60px;
-  max-height: 60px;
   object-fit: contain;
   display: block;
 }
-
-/* Бургер */
+/* Burger */
 .burger {
   display: none;
   font-size: 30px;
@@ -45,8 +41,7 @@ header {
   border: none;
   cursor: pointer;
 }
-
-/* Меню */
+/* Navigation */
 nav {
   animation: fadeIn 0.6s ease-out;
 }
@@ -68,8 +63,6 @@ nav {
 .nav-menu a:hover {
   text-decoration: underline;
 }
-
-/* Подменю */
 .submenu {
   display: none;
   position: absolute;
@@ -91,7 +84,6 @@ nav {
 .has-submenu:hover .submenu {
   display: block;
 }
-
 /* Hero */
 .hero {
   background: url('../img/metal-yard.png') center/cover no-repeat;
@@ -122,8 +114,80 @@ nav {
 .cta-button:hover {
   background-color: #1f2466;
 }
-
-/* Контент */
+/* Services Section with Video Background */
+.service-section {
+  position: relative;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.service-video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.service-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service-section > * {
+  position: relative;
+  z-index: 1;
+}
+.service-title h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+.service-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.service-box-image-top {
+  background-color: white;
+  color: #2C328C;
+  border-radius: 10px;
+  padding: 0 0 20px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.service-box-image-top h3 {
+  font-size: 1.1em;
+  margin: 20px 0 10px 0;
+  font-weight: 700;
+}
+.service-box-image-top img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.service-box-image-top p {
+  font-size: 0.95em;
+  margin: 15px 20px;
+  color: #333;
+}
+.learn-button {
+  margin-top: auto;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00B050;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.learn-button:hover {
+  background-color: #009542;
+}
+/* Other Sections */
 .about, .vehicles, .videos {
   padding: 60px 20px;
   max-width: 900px;
@@ -138,101 +202,6 @@ nav {
   font-size: 1.1em;
   color: #555;
 }
-
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 60px 20px;
-  background-color: #f7f7f7;
-}
-.service-card {
-  background: white;
-  border-radius: 8px;
-  padding: 25px;
-  max-width: 280px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-.service-card img {
-  width: 60px;
-  margin-bottom: 15px;
-}
-.service-card h3 {
-  color: #00B050;
-  margin-bottom: 10px;
-}
-
-/* Новый блок Services */
-.service-section {
-  background-color: #2C328C;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.service-title h2 {
-  font-size: 2em;
-  margin-bottom: 40px;
-}
-
-.service-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.service-box {
-  background-color: white;
-  color: #2C328C;
-  border-radius: 8px;
-  padding: 25px;
-  max-width: 250px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.service-box img {
-  width: calc(100% - 20px);
-  height: 180px;
-  object-fit: cover;
-  background-color: white;
-  padding: 8px;
-  border-radius: 8px;
-  margin: 0 auto 20px auto;
-  display: block;
-  box-shadow: 0 0 0 2px white;
-}
-
-.service-box h3 {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.service-box p {
-  font-size: 0.95em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.learn-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #00B050;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.learn-button:hover {
-  background-color: #009542;
-}
-
-/* Контакты */
 .contact {
   padding: 60px 20px;
   background-color: #e6f2ec;
@@ -267,7 +236,6 @@ nav {
 .contact button:hover {
   background-color: #009542;
 }
-
 /* Footer */
 footer {
   background-color: #2C328C;
@@ -276,19 +244,11 @@ footer {
   padding: 20px;
   font-size: 0.9em;
 }
-
-/* Анимация */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Мобильная адаптация */
+/* Responsive */
 @media (max-width: 768px) {
   .burger {
     display: block;
   }
-
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -296,11 +256,9 @@ footer {
     background-color: #ffffff;
     margin-top: 10px;
   }
-
   .nav-menu.active {
     display: flex;
   }
-
   .has-submenu .submenu {
     display: none;
     position: static;
@@ -308,143 +266,22 @@ footer {
     box-shadow: none;
     padding-left: 20px;
   }
-
   .has-submenu .submenu.open {
     display: block;
   }
-
   .submenu li a {
     color: #2C328C;
   }
-
   header {
     flex-direction: row;
     align-items: center;
     height: auto;
   }
-
   .logo-wrapper img {
     height: 50px;
   }
-
-  .service-cards {
+  .service-cards-grid {
     flex-direction: column;
     align-items: center;
   }
-}
-
-.service-section {
-  background-color: #2C328C;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.service-title h2 {
-  font-size: 2em;
-  margin-bottom: 40px;
-}
-
-.service-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.service-box-image-top {
-  background-color: white;
-  color: #2C328C;
-  border-radius: 10px;
-  padding: 0 0 20px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-}
-
-.service-box-image-top h3 {
-  font-size: 1.1em;
-  margin: 20px 0 10px 0;
-  font-weight: 700;
-}
-
-.service-box-image-top img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.service-box-image-top p {
-  font-size: 0.95em;
-  margin: 15px 20px;
-  color: #333;
-}
-
-.learn-button {
-  margin-top: auto;
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #00B050;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.learn-button:hover {
-  background-color: #009542;
-}
-
-@media (max-width: 768px) {
-  .service-box-image-top img {
-    height: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .service-cards-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 30px;
-    align-items: stretch;
-  }
-
-  .service-box-image-top {
-    flex: 1 1 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1;
-  }
-
-  .service-box-image-top:hover {
-    transform: scale(1.18);
-    z-index: 2;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  }
-
-  .service-box-image-top img {
-    transition: transform 0.3s ease;
-  }
-
-  .service-box-image-top:hover img {
-    transform: scale(1.1);
-  }
-}
-
-.service-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('../img/pattern.png') repeat;
-  background-size: 512px;
-  opacity: 0.04;
-  pointer-events: none;
-  z-index: 0;
-}
-.service-section {
-  position: relative;
-  z-index: 1;
 }
