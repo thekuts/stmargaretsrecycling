@@ -166,8 +166,6 @@ nav {
 
 /* Новый блок Services */
 .service-section {
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
-  mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
   background-color: #2C328C;
   color: white;
   padding: 60px 20px;
@@ -449,23 +447,4 @@ footer {
 .service-section {
   position: relative;
   z-index: 1;
-}
-
-.about-bridge {
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(44, 50, 140, 0.9);
-  color: white;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  max-width: 500px;
-  text-align: center;
-  z-index: 10;
-}
-
-.hero {
-  position: relative;
 }
