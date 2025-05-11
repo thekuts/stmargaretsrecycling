@@ -279,15 +279,15 @@ footer {
   }
 }
 
-.icon-labels {
+.icon-labels.top-labels {
   display: flex;
   justify-content: space-between;
   gap: 25px;
   max-width: 1200px;
-  margin: 20px auto 40px auto;
+  margin: 20px auto 60px auto;
   padding: 0 10px;
 }
-.icon-labels .label {
+.icon-labels.top-labels .label {
   text-align: center;
   flex: 0 0 auto;
   width: 120px;
