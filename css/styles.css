@@ -279,15 +279,28 @@ footer {
   }
 }
 
-.icon-labels.top-labels {
+.icon-strip.dark-icons {
+  background: #1e2a57;
+  padding: 30px 0;
+}
+.icon-strip .icon-item {
+  width: 120px;
+  flex: 0 0 auto;
+  text-align: center;
+}
+.icon-strip .icon-item img {
+  width: 72px;
+  height: 72px;
+}
+.icon-labels.plain-text-below {
   display: flex;
   justify-content: space-between;
   gap: 25px;
   max-width: 1200px;
-  margin: 20px auto 60px auto;
+  margin: 120px auto 60px auto;
   padding: 0 10px;
 }
-.icon-labels.top-labels .label {
+.icon-labels.plain-text-below .label {
   text-align: center;
   flex: 0 0 auto;
   width: 120px;
