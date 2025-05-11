@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,10 +10,7 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
-/* Шапка */
 header {
-  position: relative;
   background-color: #ffffff;
   padding: 10px 20px;
   display: flex;
@@ -23,20 +21,9 @@ header {
   z-index: 100;
   border-bottom: 1px solid #e0e0e0;
 }
-
-/* Логотип */
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-}
 .logo-wrapper img {
   height: 60px;
-  max-height: 60px;
-  object-fit: contain;
-  display: block;
 }
-
-/* Бургер */
 .burger {
   display: none;
   font-size: 30px;
@@ -45,31 +32,20 @@ header {
   border: none;
   cursor: pointer;
 }
-
-/* Меню */
-nav {
-  animation: fadeIn 0.6s ease-out;
-}
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 25px;
-}
-.nav-menu > li {
-  position: relative;
 }
 .nav-menu a {
   color: #2C328C;
   text-decoration: none;
   font-weight: 500;
   padding: 10px;
-  display: block;
 }
 .nav-menu a:hover {
   text-decoration: underline;
 }
-
-/* Подменю */
 .submenu {
   display: none;
   position: absolute;
@@ -81,18 +57,9 @@ nav {
   z-index: 10;
   list-style: none;
 }
-.submenu li a {
-  color: #2C328C;
-  padding: 10px 15px;
-}
-.submenu li a:hover {
-  background-color: #f2f2f2;
-}
 .has-submenu:hover .submenu {
   display: block;
 }
-
-/* Hero */
 .hero {
   background: url('../img/metal-yard.png') center/cover no-repeat;
   color: white;
@@ -116,41 +83,56 @@ nav {
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
-  transition: 0.3s ease;
 }
 .cta-button:hover {
   background-color: #1f2466;
 }
-
-/* WHO WE ARE */
-.who-we-are {
-  padding: 50px 20px;
+.about-section {
+  padding: 60px 20px;
   background-color: #f9f9f9;
-  text-align: center;
 }
-.who-we-are h2 {
-  font-size: 2em;
+.about-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.about-block.reverse {
+  flex-direction: row-reverse;
+}
+.about-image {
+  flex: 1 1 640px;
+  max-width: 640px;
+}
+.about-image video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.about-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+.about-text h2 {
   color: #2C328C;
+  font-size: 2em;
   margin-bottom: 20px;
 }
-.who-we-are p {
-  max-width: 900px;
-  margin: 0 auto;
+.about-text p {
   font-size: 1.1em;
   color: #444;
   line-height: 1.7;
 }
-
-/* SERVICES */
 .service-section {
   padding: 30px 20px 60px 20px;
   text-align: center;
 }
 .service-title h2.section-heading {
-  border: none;
-  padding: 0;
-  background: none;
-  box-shadow: none;
   font-size: 2em;
   font-weight: 700;
   color: #2C328C;
@@ -207,44 +189,6 @@ nav {
 .learn-button:hover {
   background-color: #009542;
 }
-
-/* Контакты */
-.contact {
-  padding: 60px 20px;
-  background-color: #e6f2ec;
-  text-align: center;
-}
-.contact h2 {
-  color: #2C328C;
-  margin-bottom: 20px;
-}
-.contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.contact input,
-.contact textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.contact button {
-  background-color: #00B050;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.contact button:hover {
-  background-color: #009542;
-}
-
-/* Footer */
 footer {
   background-color: #2C328C;
   color: white;
@@ -252,19 +196,10 @@ footer {
   padding: 20px;
   font-size: 0.9em;
 }
-
-/* Анимация */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Мобильная адаптация */
 @media (max-width: 768px) {
   .burger {
     display: block;
   }
-
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -272,116 +207,9 @@ footer {
     background-color: #ffffff;
     margin-top: 10px;
   }
-
   .nav-menu.active {
     display: flex;
   }
-
-  .has-submenu .submenu {
-    display: none;
-    position: static;
-    background-color: #f8f8f8;
-    box-shadow: none;
-    padding-left: 20px;
-  }
-
-  .has-submenu .submenu.open {
-    display: block;
-  }
-
-  .submenu li a {
-    color: #2C328C;
-  }
-
-  header {
-    flex-direction: row;
-    align-items: center;
-    height: auto;
-  }
-
-  .logo-wrapper img {
-    height: 50px;
-  }
-
-  .service-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service-box-image-top img {
-    height: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .service-cards-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 30px;
-    align-items: stretch;
-  }
-
-  .service-box-image-top {
-    flex: 1 1 0;
-  }
-
-  .service-box-image-top:hover {
-    transform: scale(1.18);
-    z-index: 2;
-  }
-
-  .service-box-image-top img {
-    transition: transform 0.3s ease;
-  }
-
-  .service-box-image-top:hover img {
-    transform: scale(1.1);
-  }
-}
-.about-section {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-}
-.about-block {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 60px;
-}
-.about-block.reverse {
-  flex-direction: row-reverse;
-}
-.about-image {
-  flex: 1 1 640px;
-  max-width: 640px;
-}
-.about-image video {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-.about-text {
-  flex: 1 1 500px;
-  max-width: 600px;
-}
-.about-text h2 {
-  color: #2C328C;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-.about-text p {
-  font-size: 1.1em;
-  color: #444;
-  line-height: 1.7;
-}
-
-@media (max-width: 768px) {
   .about-block,
   .about-block.reverse {
     flex-direction: column;
