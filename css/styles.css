@@ -370,3 +370,10 @@ body {
 .service-section {
   background-color: white !important;
 }
+
+
+.service-cards-grid {
+  max-width: 95%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
