@@ -107,7 +107,6 @@ nav {
 .hero p {
   font-size: 1.2em;
   margin-bottom: 30px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
 .cta-button {
   background-color: #2C328C;
@@ -123,53 +122,30 @@ nav {
   background-color: #1f2466;
 }
 
-/* Контент */
-.about, .vehicles, .videos {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+/* WHO WE ARE */
+.who-we-are {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
   text-align: center;
 }
-.about h2, .vehicles h2, .videos h2 {
+.who-we-are h2 {
+  font-size: 2em;
   color: #2C328C;
   margin-bottom: 20px;
 }
-.about p, .vehicles p, .videos p {
+.who-we-are p {
+  max-width: 900px;
+  margin: 0 auto;
   font-size: 1.1em;
-  color: #555;
+  color: #444;
+  line-height: 1.7;
 }
 
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 60px 20px;
-  background-color: #f7f7f7;
-}
-.service-card {
-  background: white;
-  border-radius: 8px;
-  padding: 25px;
-  max-width: 280px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-.service-card img {
-  width: 60px;
-  margin-bottom: 15px;
-}
-.service-card h3 {
-  color: #00B050;
-  margin-bottom: 10px;
-}
-
-/* Our Services */
+/* SERVICES */
 .service-section {
   padding: 30px 20px 60px 20px;
   text-align: center;
 }
-
 .service-title h2.section-heading {
   border: none;
   padding: 0;
@@ -179,7 +155,6 @@ nav {
   font-weight: 700;
   color: #2C328C;
 }
-
 .service-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -187,7 +162,6 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .service-box-image-top {
   background-color: white;
   color: #2C328C;
@@ -201,30 +175,25 @@ nav {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .service-box-image-top:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 .service-box-image-top h3 {
   font-size: 1.1em;
   margin: 20px 0 10px 0;
   font-weight: 700;
 }
-
 .service-box-image-top img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
-
 .service-box-image-top p {
   font-size: 0.95em;
   margin: 15px 20px;
   color: #333;
 }
-
 .learn-button {
   margin-top: auto;
   display: inline-block;
@@ -235,7 +204,6 @@ nav {
   border-radius: 5px;
   font-weight: bold;
 }
-
 .learn-button:hover {
   background-color: #009542;
 }
