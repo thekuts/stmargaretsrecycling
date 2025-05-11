@@ -156,6 +156,9 @@
 
       icons.forEach(icon => observer.observe(icon));
     });
+  
+      items.forEach(item => observer.observe(item));
+    });
   </script>
 
 
@@ -168,8 +171,13 @@
             entry.target.classList.add("visible");
           }
         });
-      }, { threshold: 1.0 });
+      }, {
+        threshold: 0.3
+      });
 
+      items.forEach(item => observer.observe(item));
+    });
+  
       items.forEach(item => observer.observe(item));
     });
   </script>
