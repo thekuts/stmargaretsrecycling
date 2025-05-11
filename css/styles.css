@@ -402,3 +402,18 @@ body, html {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   padding: 24px;
 }
+
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero > div.hero-box {
+  display: inline-block;
+  padding: 20px 30px;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.0); /* Прозрачный фон */
+  border-radius: 6px;
+}
