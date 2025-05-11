@@ -138,14 +138,6 @@ header {
   color: #2C328C;
 }
 .service-cards-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 30px;
-  overflow-x: auto;
-  padding: 20px 0;
-}
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -153,18 +145,6 @@ header {
   margin: 0 auto;
 }
 .service-box-image-top {
-  background-color: white;
-  color: #2C328C;
-  border-radius: 10px;
-  padding: 0 0 20px 0;
-  border: 1px solid #2C328C;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
   background-color: white;
   color: #2C328C;
   border-radius: 10px;
@@ -178,9 +158,6 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .service-box-image-top:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -190,11 +167,6 @@ header {
   font-weight: 700;
 }
 .service-box-image-top img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -224,13 +196,6 @@ footer {
   padding: 20px;
   font-size: 0.9em;
 }
-@media (max-width: 1024px) {
-  .service-cards-grid {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
 @media (max-width: 768px) {
   .burger {
     display: block;
